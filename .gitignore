@@ -1,0 +1,59 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# editor files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# logs
+logs
+*.log
+
+# OS generated files
+Thumbs.db
+
+# optional eslint cache
+.eslintcache
+
+# parcel cache (if using parcel)
+.cache/
+
+# vite cache
+.vite/
+
+# next.js build output
+.next/
+
+# temporary files
+tmp/
+temp/
+
+# local netlify folder
+.netlify
