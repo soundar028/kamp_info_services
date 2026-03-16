@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image": "lp1.jpg",
+        "name": "Architechture Bridge",
+        "meta": "Power & Energy"
+    },
+    {
+        "id": 2,
+        "image": "lp2.jpg",
+        "name": "Ship Repair",
+        "meta": "Power & Energy"
+    },
+    {
+        "id": 3,
+        "image": "lp3.jpg",
+        "name": "Agricultural Development",
+        "meta": "Agricultural Processing"
+    },
+    {
+        "id": 4,
+        "image": "lp4.jpg",
+        "name": "Civil Engineering",
+        "meta": "Welding"
+    }
+]

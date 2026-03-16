@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "image": "client3.png",
+        "name": "Abigail",
+        "designation": "Engineer",
+        "text": "Atomorum principes eu mea, at nec insolens dissentiet, no vis nulla lucilius. Nam veritus pericula id. Utinam fastidii consetetur eam at."
+    },
+    {
+        "id": 2,
+        "image": "client2.png",
+        "name": "Elizabeth",
+        "designation": "Architecture",
+        "text": "Atomorum principes eu mea, at nec insolens dissentiet, no vis nulla lucilius. Nam veritus pericula id. Utinam fastidii consetetur eam at."
+    },
+    {
+        "id": 3,
+        "image": "client1.png",
+        "name": "Anthony",
+        "designation": "Industrial",
+        "text": "Atomorum principes eu mea, at nec insolens dissentiet, no vis nulla lucilius. Nam veritus pericula id. Utinam fastidii consetetur eam at."
+    },
+    {
+        "id": 4,
+        "image": "client2.png",
+        "name": "Elizabeth",
+        "designation": "Architecture",
+        "text": "Atomorum principes eu mea, at nec insolens dissentiet, no vis nulla lucilius. Nam veritus pericula id. Utinam fastidii consetetur eam at."
+    },
+    {
+        "id": 5,
+        "image": "client3.png",
+        "name": "Abigail",
+        "designation": "Engineer",
+        "text": "Atomorum principes eu mea, at nec insolens dissentiet, no vis nulla lucilius. Nam veritus pericula id. Utinam fastidii consetetur eam at."
+    },
+    {
+        "id": 6,
+        "image": "client1.png",
+        "name": "Anthony",
+        "designation": "Industrial",
+        "text": "Atomorum principes eu mea, at nec insolens dissentiet, no vis nulla lucilius. Nam veritus pericula id. Utinam fastidii consetetur eam at."
+    }
+]

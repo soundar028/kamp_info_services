@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "image": "s1.jpg",
+        "icon": "icofont-light-bulb",
+        "title": "Factory Energy Power",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut."
+    },
+    {
+        "id": 2,
+        "image": "s2.jpg",
+        "icon": "icofont-business-man",
+        "title": "Expert Mechanical",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut."
+    }
+]

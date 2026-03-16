@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "image": "s1.jpg",
+        "icon": "icofont-light-bulb",
+        "title": "Energy Power",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    },
+    {
+        "id": 2,
+        "image": "s2.jpg",
+        "icon": "icofont-business-man",
+        "title": "Expert Mechanical",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    },
+    {
+        "id": 3,
+        "image": "s3.jpg",
+        "icon": "icofont-repair",
+        "title": "Repair Technology",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    },
+    {
+        "id": 4,
+        "image": "s4.jpg",
+        "icon": "icofont-energy-oil",
+        "title": "Refinery Petroleum",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    },
+    {
+        "id": 5,
+        "image": "s5.jpg",
+        "icon": "icofont-worker",
+        "title": "Mechanical Industry",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    },
+    {
+        "id": 6,
+        "image": "s6.jpg",
+        "icon": "icofont-fire-extinguisher",
+        "title": "Chemical Research",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    },
+    {
+        "id": 7,
+        "image": "s7.jpg",
+        "icon": "icofont-cement-mix",
+        "title": "Mechanical Task",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    },
+    {
+        "id": 8,
+        "image": "s8.jpg",
+        "icon": "icofont-vehicle-wrecking",
+        "title": "Civil Engineering",
+        "text": "Lorem ipsum dolor sit amet, lorem nibh lectus urna arcu, lorem erat semper, auctor suspendisse quisque molestie ut.",
+        "btn": "Read More",
+        "btnLink": "/"
+    }
+]

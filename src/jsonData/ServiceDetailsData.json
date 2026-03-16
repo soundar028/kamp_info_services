@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "icon": "icofont-industries-2",
+        "title": "Factory Energy Power",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun"
+    },
+    {
+        "id": 2,
+        "icon": "icofont-energy-oil",
+        "title": "Refinery Petroleum",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun"
+    },
+    {
+        "id": 3,
+        "icon": "icofont-worker",
+        "title": "Expert Mechanical",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun"
+    },
+    {
+        "id": 4,
+        "icon": "icofont-repair",
+        "title": "Repair Technology",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun"
+    }
+]

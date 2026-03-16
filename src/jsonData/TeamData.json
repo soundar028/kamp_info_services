@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image": "team-1.jpg",
+        "name": "Sweety",
+        "title": "Virtual Assistant"
+    },
+    {
+        "id": 2,
+        "image": "team-3.jpg",
+        "name": "Shiddik",
+        "title": "Repair Technology"
+    },
+    {
+        "id": 3,
+        "image": "team-2.jpg",
+        "name": "Istiak",
+        "title": "Mechanical Engineer"
+    },
+    {
+        "id": 4,
+        "image": "team-4.jpg",
+        "name": "Michael",
+        "title": "Refinery Petroleum"
+    }
+]

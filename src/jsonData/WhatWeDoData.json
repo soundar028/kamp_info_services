@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "icon": "icofont-architecture-alt",
+        "title": "Mechanical",
+        "title2": "Industry",
+        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
+        "btnLink": "#"
+    },
+    {
+        "id": 2,
+        "icon": "icofont-laboratory",
+        "title": "Chemical",
+        "title2": "Research",
+        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
+        "btnLink": "#"
+    },
+    {
+        "id": 3,
+        "icon": "icofont-trolley",
+        "title": "Agricultural",
+        "title2": "Process",
+        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
+        "btnLink": "#"
+    },
+    {
+        "id": 4,
+        "icon": "icofont-engineer",
+        "title": "Civil",
+        "title2": "Engineering",
+        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
+        "btnLink": "#"
+    },
+    {
+        "id": 5,
+        "icon": "icofont-energy-oil",
+        "title": "Oil &",
+        "title2": "Gas Power",
+        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
+        "btnLink": "#"
+    },
+    {
+        "id": 6,
+        "icon": "icofont-light-bulb",
+        "title": "Power &",
+        "title2": "Energy",
+        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
+        "btnLink": "#"
+    }
+]

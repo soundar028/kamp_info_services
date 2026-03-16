@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "image": "slide1.jpg",
+        "title": "We provide all Industrial & Factorial solutions",
+        "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
+        "btn1": "Learn More",
+        "btn1Link": "/",
+        "btn2": "Contact Us",
+        "btn2Link": "/"
+    },
+    {
+        "id": 2,
+        "image": "slide2.jpg",
+        "title": "We provide all Industrial & Factorial solutions",
+        "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
+        "btn1": "Learn More",
+        "btn1Link": "/",
+        "btn2": "Contact Us",
+        "btn2Link": "/"
+    }
+]

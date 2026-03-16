@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "start": 0,
+        "end": 285,
+        "delay": 1,
+        "text": "Happy Client"
+    },
+    {
+        "id": 2,
+        "start": 0,
+        "end": 128,
+        "delay": 1,
+        "text": "Project Complete"
+    },
+    {
+        "id": 3,
+        "start": 0,
+        "end": 130,
+        "delay": 1,
+        "text": "Customer Support"
+    },
+    {
+        "id": 4,
+        "start": 0,
+        "end": 275,
+        "delay": 1,
+        "text": "Award Winner"
+    }
+]

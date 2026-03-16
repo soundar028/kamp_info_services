@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "image": "b1.jpg",
+        "imageMini": "r1.jpg",
+        "date": "28 Jun 2023",
+        "author": "Admin",
+        "comment": "27",
+        "title": "Eam Vide Graece Suscipiantur Ea, Cum apeirian Solet",
+        "text": "Eam vide graece suscipiantur ea, cum ad solet apeirian mnesarchum, has soluta forensibus cu. Reque iudico eum ad. At vivendo lucilius est, an has mentitum perpetua"
+    },
+    {
+        "id": 2,
+        "image": "b2.jpg",
+        "imageMini": "r2.jpg",
+        "date": "21 May 2023",
+        "author": "Admin",
+        "comment": "14",
+        "title": "Ne Qui Impetus Gubergren, Soluta Lucilius  Homero Vidisse.",
+        "text": "Eam vide graece suscipiantur ea, cum ad solet apeirian mnesarchum, has soluta forensibus cu. Reque iudico eum ad. At vivendo lucilius est, an has mentitum perpetua"
+    },
+    {
+        "id": 3,
+        "image": "b3.jpg",
+        "imageMini": "r3.jpg",
+        "date": "26 Feb 2023",
+        "author": "Admin",
+        "comment": "22",
+        "title": "Mazim Legere Aliquando Integre Consectetuer Forensibus Cu.",
+        "text": "Eam vide graece suscipiantur ea, cum ad solet apeirian mnesarchum, has soluta forensibus cu. Reque iudico eum ad. At vivendo lucilius est, an has mentitum perpetua"
+    },
+    {
+        "id": 4,
+        "image": "b4.jpg",
+        "imageMini": "r1.jpg",
+        "date": "18 Mar 2023",
+        "author": "Admin",
+        "comment": "17",
+        "title": "Ne Qui Impetus Gubergren, Duo Ne Homero Vidisse lucilius .",
+        "text": "Eam vide graece suscipiantur ea, cum ad solet apeirian mnesarchum, has soluta forensibus cu. Reque iudico eum ad. At vivendo lucilius est, an has mentitum perpetua"
+    },
+    {
+        "id": 5,
+        "image": "b5.jpg",
+        "imageMini": "r2.jpg",
+        "date": "08 Jan 2023",
+        "author": "Admin",
+        "comment": "28",
+        "title": "Mazim Legere Aliquando Integre Consectetuer Forensibus Cu.",
+        "text": "Eam vide graece suscipiantur ea, cum ad solet apeirian mnesarchum, has soluta forensibus cu. Reque iudico eum ad. At vivendo lucilius est, an has mentitum perpetua"
+    },
+    {
+        "id": 6,
+        "image": "b6.jpg",
+        "imageMini": "r3.jpg",
+        "date": "12 May 2023",
+        "author": "Admin",
+        "comment": "15",
+        "title": "Mazim Legere Aliquando Integre Consectetuer Forensibus Cu.",
+        "text": "Eam vide graece suscipiantur ea, cum ad solet apeirian mnesarchum, has soluta forensibus cu. Reque iudico eum ad. At vivendo lucilius est, an has mentitum perpetua"
+    }
+]

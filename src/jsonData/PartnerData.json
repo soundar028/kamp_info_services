@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "image": "partner_1.jpg"
+    },
+    {
+        "id": 2,
+        "image": "partner_2.jpg"
+    },
+    {
+        "id": 3,
+        "image": "partner_3.jpg"
+    },
+    {
+        "id": 4,
+        "image": "partner_4.jpg"
+    },
+    {
+        "id": 5,
+        "image": "partner_5.jpg"
+    },
+    {
+        "id": 6,
+        "image": "partner_6.jpg"
+    }
+]
