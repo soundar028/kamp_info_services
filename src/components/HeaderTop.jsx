@@ -11,8 +11,8 @@ const HeaderTop = () => {
                             <div className="header-left">
                                 <span className="social-title me-2">Need Any Help?</span>
                                 <ul>
-                                    <li><i className="icofont-phone"></i><a href="tel:+00 0123456789">+00 0123456789</a></li>
-                                    <li><i className="icofont-mail"></i><a href="mailto:info@finixpa.com">info@finixpa.com</a></li>
+                                    <li><i className="icofont-phone"></i><a href="tel:+91 8220653952">+91 82206 53952</a></li>
+                                    <li><i className="icofont-mail"></i><a href="mailto:info@kampinfoservices.com">info@kampinfoservices.com</a></li>
                                 </ul>
                             </div>
                         </div>

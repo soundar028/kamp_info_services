@@ -10,7 +10,8 @@ const ContactInfo = () => {
                     </div>
                     <div className="contact-info-text">
                         <h2>address</h2>
-                        <span>Californiya , United State</span>
+                        <span>520, Srisai Murali, V.K.V Nagar, N.G.G.O Colony, Thudiyalur</span>
+                        <span>Coimbatore - 641021</span>
                     </div>
                 </div>
             </div>
@@ -21,8 +22,7 @@ const ContactInfo = () => {
                     </div>
                     <div className="contact-info-text">
                         <h2>e-mail</h2>
-                        <span> <a href="mailto:company@gmail.com">company@gmail.com</a> </span>
-                        <span> <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a> </span>
+                        <span> <a href="mailto:info@kampinfoservices.com">info@kampinfoservices.com</a> </span>
                     </div>
                 </div>
             </div>

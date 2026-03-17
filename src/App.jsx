@@ -34,7 +34,7 @@ function App() {
       {isLoading ? <PreLoader /> :
         <div>
           <Helmet>
-            <title>Finixpa || Industrial & Factorial Business React Template</title>
+            <title>KAMP INFO SERVICES || Streamlined Die Casting solutions for Multiple Industries</title>
             <link rel="shortcut icon" href="../public/favicon.ico"></link>
           </Helmet>
           <Routers />

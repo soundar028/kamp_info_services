@@ -1,49 +1,41 @@
 [
     {
         "id": 1,
-        "icon": "icofont-architecture-alt",
-        "title": "Mechanical",
+        "icon": "icofont-auto-mobile",
+        "title": "Automotive",
         "title2": "Industry",
         "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
         "btnLink": "#"
     },
     {
         "id": 2,
-        "icon": "icofont-laboratory",
-        "title": "Chemical",
+        "icon": "icofont-hospital",
+        "title": "Healthcare",
         "title2": "Research",
         "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
         "btnLink": "#"
     },
     {
         "id": 3,
-        "icon": "icofont-trolley",
-        "title": "Agricultural",
-        "title2": "Process",
+        "icon": "icofont-light-bulb",
+        "title": "Electrical",
+        "title2": "Industry",
         "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
         "btnLink": "#"
     },
     {
         "id": 4,
-        "icon": "icofont-engineer",
-        "title": "Civil",
-        "title2": "Engineering",
+        "icon": "icofont-water-drop",
+        "title": "Hydraulic",
+        "title2": "Industry",
         "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
         "btnLink": "#"
     },
     {
         "id": 5,
-        "icon": "icofont-energy-oil",
-        "title": "Oil &",
-        "title2": "Gas Power",
-        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
-        "btnLink": "#"
-    },
-    {
-        "id": 6,
-        "icon": "icofont-light-bulb",
-        "title": "Power &",
-        "title2": "Energy",
+        "icon": "icofont-air-balloon",
+        "title": "Pneumatic",
+        "title2": "Valves",
         "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
         "btnLink": "#"
     }

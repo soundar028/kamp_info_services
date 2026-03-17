@@ -26,70 +26,23 @@ const OffCanvasMenu = () => {
                         <div className="container-fluid">
                             <div className="collapse navbar-collapse show" id="navbarSupportedContent">
                                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li className="nav-item dropdown">
-                                        <Link className="nav-link dropdown-toggle" aria-current="page" to="#" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle1(!iconToggle1)}>
-                                            Home
-                                            {iconToggle1 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"></i>}
-                                        </Link>
-                                        <ul className="dropdown-menu">
-                                            <li>
-                                                <Link className={location.pathname === '/' ? 'dropdown-item active' : 'dropdown-item'} to="/#">Home Version 1</Link>
-                                            </li>
-                                            <li>
-                                                <Link className={location.pathname === '/home-2' ? 'dropdown-item active' : 'dropdown-item'} to="/home-2#">Home Version 2</Link>
-                                            </li>
-                                        </ul>
+                                     <li className="nav-item">
+                                        <Link className={location.pathname === '/' ? 'nav-link active' : 'nav-link'} to="/#">Home</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className={location.pathname === '/about' ? 'nav-link active' : 'nav-link'} to="/about#">About</Link>
                                     </li>
-                                    <li className="nav-item dropdown">
-                                        <Link className="nav-link dropdown-toggle" to="/service#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle2(!iconToggle2)}>
-                                            Service
-                                            {iconToggle2 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"> </i>}
-                                        </Link>
-                                        <ul className="dropdown-menu">
-                                            <li>
-                                                <Link className={location.pathname === '/service' ? 'dropdown-item active' : 'dropdown-item'} to="/service#">Service</Link>
-                                            </li>
-                                            <li>
-                                                <Link className={location.pathname === '/service-2' ? 'dropdown-item active' : 'dropdown-item'} to="/service-2#">Service V2 Page</Link>
-                                            </li>
-                                            <li>
-                                                <Link className={location.pathname === '/service-details' ? 'dropdown-item active' : 'dropdown-item'} to="/service-details#">Service Details</Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item dropdown">
-                                        <Link className="nav-link dropdown-toggle" to="/project#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle3(!iconToggle3)}>
-                                            Project
-                                            {iconToggle3 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"></i>}
-                                        </Link>
-                                        <ul className="dropdown-menu">
-                                            <li>
-                                                <Link className={location.pathname === '/project' ? 'dropdown-item active' : 'dropdown-item'} to="/project#">Project</Link>
-                                            </li>
-                                            <li>
-                                                <Link className={location.pathname === '/project-details' ? 'dropdown-item active' : 'dropdown-item'} to="/project-details#">Project Details</Link>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li className="nav-item dropdown">
-                                        <Link className="nav-link dropdown-toggle" to="/blog#" role="button" data-bs-toggle="dropdown" aria-expanded="false" onClick={() => setIconToggle4(!iconToggle4)}>
-                                            Blog
-                                            {iconToggle4 ? <i className="fa-solid fa-plus"></i> : <i className="fa-solid fa-minus"></i>}
-                                        </Link>
-                                        <ul className="dropdown-menu">
-                                            <li>
-                                                <Link className={location.pathname === '/blog' ? 'dropdown-item active' : 'dropdown-item'} to="/blog#">Blog</Link>
-                                            </li>
-                                            <li>
-                                                <Link className={location.pathname === '/blog-details' ? 'dropdown-item active' : 'dropdown-item'} to="/blog-details#">Blog Details</Link>
-                                            </li>
-                                        </ul>
+                                   <li className="nav-item">
+                                        <Link className={location.pathname === '/service' ? 'nav-link active' : 'nav-link'} to="/service#">Service</Link>
                                     </li>
                                     <li className="nav-item">
                                         <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Contact</Link>
+                                    </li>
+                                    <li className="nav-item">
+                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Vendor</Link>
+                                    </li>
+                                     <li className="nav-item">
+                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Customer</Link>
                                     </li>
                                 </ul>
                             </div>

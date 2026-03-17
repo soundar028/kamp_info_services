@@ -17,10 +17,7 @@ const Home2 = () => {
             <Banner />
             <WhatWeDo />
             <CallToAction />
-            <LatestProject />
-            <TeamV2 />
             <TestimonialCountUp />
-            <LatestBlog />
             <Partner />
             <Footer />
         </>

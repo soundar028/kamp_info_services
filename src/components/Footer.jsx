@@ -26,27 +26,11 @@ const Footer = () => {
                                 <div className="footer-widget-two footer-widget-menu">
                                     <h2>our solutions</h2>
                                     <ul>
-                                        <li><Link to="#">Factory Energy Power</Link></li>
-                                        <li><Link to="#">Chemical Research</Link></li>
-                                        <li><Link to="#">Expert Mechanical</Link></li>
-                                        <li><Link to="#">civil engineering</Link></li>
-                                        <li><Link to="#">oil & gas services</Link></li>
-                                        <li><Link to="#">Repair Technology</Link></li>
-                                        <li><Link to="#">Refinery Petroleum</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div className="col-lg-2 col-md-6">
-                                <div className="footer-widget-three footer-widget-menu">
-                                    <h2>useful link</h2>
-                                    <ul>
-                                        <li><Link to="/about#">about us</Link></li>
-                                        <li><Link to="/project#">latest project</Link></li>
-                                        <li><Link to="/about#">faq</Link></li>
-                                        <li><Link to="/contact#">Contact Us</Link></li>
-                                        <li><Link to="/contact#">site map</Link></li>
-                                        <li><Link to="#">trust People</Link></li>
-                                        <li><Link to="#">Our Project</Link></li>
+                                        <li><Link to="#">Automotive Industry</Link></li>
+                                        <li><Link to="#">Healthcare Research</Link></li>
+                                        <li><Link to="#">Electrical Industry</Link></li>
+                                        <li><Link to="#">Hydraulic Industry</Link></li>
+                                        <li><Link to="#">Pneumatic Valves</Link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -59,8 +43,8 @@ const Footer = () => {
                                                 <i className="icofont-google-map"></i>
                                             </div>
                                             <div className="footer-contact-info-text">
-                                                <span>71 Pilgrim Avenue Chevy Chase</span>
-                                                <span>United States</span>
+                                                <span>520, Srisai Murali, V.K.V Nagar, N.G.G.O Colony, Thudiyalur</span>
+                                                <span>Coimbatore - 641021</span>
                                             </div>
                                         </div>
                                     </div>
@@ -70,8 +54,7 @@ const Footer = () => {
                                                 <i className="icofont-email"></i>
                                             </div>
                                             <div className="footer-contact-info-text">
-                                                <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a>
-                                                <a href="mailto:info@finixpa.com">info@finixpa.com</a>
+                                                <a href="mailto:info@kampinfoservices.com">info@kampinfoservices.com</a>
                                             </div>
                                         </div>
                                     </div>
@@ -81,8 +64,7 @@ const Footer = () => {
                                                 <i className="icofont-telephone"></i>
                                             </div>
                                             <div className="footer-contact-info-text">
-                                                <a href="tel:126-7545-9245">126-7545-9245</a>
-                                                <a href="tel:254-7494-6494">254-7494-6494</a>
+                                                <a href="tel:+91 8220653952">+91 82206 53952</a>
                                             </div>
                                         </div>
                                     </div>

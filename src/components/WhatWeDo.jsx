@@ -10,7 +10,6 @@ const WhatWeDo = () => {
                     <div className="row what-we-do-title-inner">
                         <div className="col-md-6">
                             <div className="what-we-do-title">
-                                <span className="what-we-do-subtitle">What We Do In here</span>
                                 <h1>We provide world best industries & factorial Business Solution</h1>
                             </div>
                         </div>

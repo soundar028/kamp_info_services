@@ -15,7 +15,6 @@ const Service2Content = () => {
                             </div>
                         )}
                     </div>
-                    <Pagination />
                 </div>
             </section>
         </>

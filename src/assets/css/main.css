@@ -614,20 +614,24 @@ input:focus {
 .apply-button {
 	position: relative;
 	z-index: 2;
-	display: inline-block;
+	display: flex;
+	align-items: center;     /* vertical */
+	justify-content: center; /* horizontal */
 	width: 100%;
 	text-align: right;
 }
 
 .apply-button a {
 	padding: 8px 0;
-	display: inline-block;
+	display: flex;
 	font-weight: 600;
 	text-transform: capitalize;
 	width: 100%;
 	text-align: center;
 	background: #f55b14;
 	color: #fff;
+	gap: 5px;
+	padding: 5px;
 }
 
 .apply-button a i {
@@ -640,6 +644,12 @@ input:focus {
 	background: #0f1934;
 	color: #fff;
 	border-color: #0f1934;
+}
+
+.apply-button-area{
+  display:flex;
+  align-items: center;
+  gap:10px;
 }
 
 /* =============== 5.Slider Section =============== */
@@ -4179,32 +4189,38 @@ footer .footer-overlay {
 	margin-bottom: 0;
 }
 
-.footer-contact-info-icon {
-	width: 40px;
-	height: 40px;
-	text-align: center;
-	line-height: 40px;
-	color: #fff;
-	font-size: 20px;
-	background: #f55b14;
-	top: 5px;
-	position: relative;
-	float: left;
+.footer-contact-info {
+    margin-bottom: 45px;
+    display: flex;
+    align-items: center;   /* vertical alignment */
+    justify-content: flex-start; /* start from left */
+    text-align: left;
 }
 
-.footer-contact-info-text {
-	padding-left: 50px;
+.footer-contact-inner:last-child .footer-contact-info {
+    margin-bottom: 0;
+}
+
+.footer-contact-info-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    background: #f55b14;
+    margin-right: 10px;
 }
 
 .footer-contact-info-text span {
-	color: #fff;
-	display: inline-block;
-	width: 100%;
+    color: #fff;
+    display: block;
 }
 
 .footer-contact-info-text a {
-	color: #fff;
-	display: block;
+    color: #fff;
+    display: block;
 }
 
 .footer-sec {

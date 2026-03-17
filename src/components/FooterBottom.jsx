@@ -9,12 +9,12 @@ const FooterBottom = () => {
                     <div className="row">
                         <div className="col-md-8 col-sm-12">
                             <div className="copy-right">
-                                <span>&copy; {(new Date().getFullYear())} Finixpa. All Rights Reserved </span>
+                                <span>&copy; {(new Date().getFullYear())} KAMP INFO SERVICES </span>
                             </div>
                         </div>
                         <div className="col-md-4 col-sm-12">
                             <div className="site-developer">
-                                <span>Design by <Link to="#">Theme Earth</Link></span>
+                                <span>Design by <Link to="#">Ero Edge Technologies</Link></span>
                             </div>
                         </div>
                     </div>

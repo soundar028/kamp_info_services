@@ -2,7 +2,7 @@
     {
         "id": 1,
         "image": "slide1.jpg",
-        "title": "We provide all Industrial & Factorial solutions",
+        "title": "Streamlined Die Casting solutions for Multiple Industries",
         "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
         "btn1": "Learn More",
         "btn1Link": "/",
@@ -11,8 +11,8 @@
     },
     {
         "id": 2,
-        "image": "slide2.jpg",
-        "title": "We provide all Industrial & Factorial solutions",
+        "image": "slide2.png",
+        "title": "Procurement Outsourcing Services",
         "text": "Lorem ipsum dolor sit amet, ligula magna at etiam aliquip venenatis. Vitae sit felis donec, suscipit tortor et sapien donec ac nec. Nam vel eu amet",
         "btn1": "Learn More",
         "btn1Link": "/",
