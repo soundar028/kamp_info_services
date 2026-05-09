@@ -1,42 +1,47 @@
 [
     {
         "id": 1,
-        "icon": "icofont-auto-mobile",
-        "title": "Automotive",
-        "title2": "Industry",
-        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
-        "btnLink": "#"
+        "slug": "supplier-selection",
+        "icon": "fa fa-user-check",
+        "title": "Supplier",
+        "title2": "Selection",
+        "text": "Expert identification and vetting of verified vendors across our Pan-India network to match your technical and volume needs.",
+        "btnLink": "/service-details"
     },
     {
         "id": 2,
-        "icon": "icofont-hospital",
-        "title": "Healthcare",
-        "title2": "Research",
-        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
-        "btnLink": "#"
+        "slug": "rfq-rfi-nda-management",
+        "icon": "icofont-file-document",
+        "title": "Enquiry",
+        "title2": "Handling",
+        "text": "Comprehensive management of RFQ/RFI processes and Non-Disclosure Agreements (NDA) for secure data exchange.",
+        "btnLink": "/service-details"
     },
     {
         "id": 3,
-        "icon": "icofont-light-bulb",
-        "title": "Electrical",
-        "title2": "Industry",
-        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
-        "btnLink": "#"
+        "slug": "negotiations-commercial-closure",
+        "icon": "fa fa-file-contract",
+        "title": "Negotiations &",
+        "title2": "Closure",
+        "text": "Driving commercial closure and value engineering to ensure cost-effective procurement and strategic advantage.",
+        "btnLink": "/service-details"
     },
     {
         "id": 4,
-        "icon": "icofont-water-drop",
-        "title": "Hydraulic",
-        "title2": "Industry",
-        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
-        "btnLink": "#"
+        "slug": "supply-chain-management",
+        "icon": "icofont-delivery-time",
+        "title": "Supply Chain",
+        "title2": "Management",
+        "text": "End-to-end support for both Domestic and Export logistics, ensuring seamless flow from supplier to your facility.",
+        "btnLink": "/service-details"
     },
     {
         "id": 5,
-        "icon": "icofont-air-balloon",
-        "title": "Pneumatic",
-        "title2": "Valves",
-        "text": "Lorem ipsum dolor sit amet, duo eu dicat elaboraret. Bonorum gubergren ne vis, qui id ponderum gloriatur definitiones.",
-        "btnLink": "#"
+        "slug": "die-casting-sourcing",
+        "icon": "icofont-gears",
+        "title": "Sourcing:",
+        "title2": "HPDC/GDC/LPDC",
+        "text": "Technical expertise in sourcing machined aluminum castings using High Pressure, Gravity, and Low Pressure Die Casting.",
+        "btnLink": "/service-details"
     }
 ]

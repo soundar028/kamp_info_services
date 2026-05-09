@@ -12,6 +12,7 @@ import Blog from '../pages/Blog';
 import BlogDetails from '../pages/BlogDetails';
 import Contact from '../pages/Contact';
 import Error404 from '../pages/Error404';
+import Submissions from '../pages/Submissions';
 
 const Routers = () => {
     return (
@@ -25,6 +26,8 @@ const Routers = () => {
                 <Route path="/blog" element={<Blog />}></Route>
                 <Route path="/blog-details" element={<BlogDetails />}></Route>
                 <Route path="/contact" element={<Contact />}></Route>
+                <Route path="/project" element={<Project />}></Route>
+                <Route path="/submissions"     element={<Submissions />} />
                 <Route path="*" element={<Error404 />}></Route>
             </Routes>
         </>

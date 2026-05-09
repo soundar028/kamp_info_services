@@ -52,24 +52,11 @@ const MainMenu = (props) => {
                                         <li><Link className={parentMenu === 'home' ? 'active' : ''} to="/#">Home</Link>
                                         </li>
                                         <li><Link className={location.pathname === '/about' ? 'active' : ''} to="/about#">About</Link></li>
-                                        <li><Link className={parentMenu === 'service' ? 'active' : ''} to="/service#">Service</Link>
-                                        </li>
+                                        <li><Link className={parentMenu === 'service' ? 'active' : ''} to="/service#">Service</Link></li>
+                                         <li><Link className={location.pathname === '/project' ? 'active' : ''} to="/project#">Gallery</Link></li>
                                         <li><Link className={location.pathname === '/contact' ? 'active' : ''} to="/contact#">Contact</Link></li>
                                     </ul>
                                 </nav>
-                            </div>
-                        </div>
-                        <div className="col-lg-2 d-none d-lg-flex apply-button-area">
-                            <div className="apply-button me-2 d-flex align-items-center justify-content-center">
-                                <Link to="/contact#">
-                                    <i className="icofont-live-support"></i> Vendor
-                                </Link>
-                            </div>
-
-                            <div className="apply-button">
-                                <Link to="/contact#">
-                                <i className="icofont-business-man"></i> Customer
-                                </Link>
                             </div>
                         </div>
                         <div className="col-8 d-lg-none">

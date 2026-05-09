@@ -8,7 +8,7 @@ const Service2 = () => {
     return (
         <>
             <Header parentMenu='service' />
-            <Breadcrumb pageTitle="Service Page 2" />
+            <Breadcrumb pageTitle="Service Page" />
             <Service2Content />
             <Footer />
         </>

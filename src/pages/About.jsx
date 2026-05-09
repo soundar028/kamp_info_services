@@ -12,7 +12,6 @@ const About = () => {
             <Header />
             <Breadcrumb pageTitle="About Page" />
             <AboutUsV2 />
-            <TeamV2 />
             <TestimonialCountUp />
             <Footer />
         </>

@@ -10,7 +10,6 @@ const ProjectContent = () => {
                     <div className="row">
                         <div className="gallery-area">
                             <GalleryContent />
-                            <LoadMoreProduct />
                         </div>
                     </div>
                 </div>

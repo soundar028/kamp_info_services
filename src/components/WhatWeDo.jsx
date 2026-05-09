@@ -10,12 +10,17 @@ const WhatWeDo = () => {
                     <div className="row what-we-do-title-inner">
                         <div className="col-md-6">
                             <div className="what-we-do-title">
-                                <h1>We provide world best industries & factorial Business Solution</h1>
+                                <h1>Transforming Procurement into a Strategic Advantage</h1>
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="what-we-do-short-description">
-                                <p>Nibh wisi utamur no vim, ex usu posidonium temporibus. Cu cum fierent vivendum, stet accusam ad qui, mei dicta fuisset salutandi ex. Cetero mandamus eos te. Ad his eripuit ullamcorper, ei fugit mentitum definitiones ius, dolorem dissentiunt sit id. Doctus diceret pro ad, labores adipisci cum ne.</p>
+                                <p>
+                                    We connect businesses with a panel of verified suppliers, 
+                                    streamlining negotiations and delivering real-time insights 
+                                    to cut costs and speed up decision-making for machined 
+                                    aluminum castings in automotive and industrial sectors.
+                                </p>
                             </div>
                         </div>
                     </div>

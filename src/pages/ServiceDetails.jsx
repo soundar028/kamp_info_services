@@ -8,7 +8,6 @@ const ServiceDetails = () => {
     return (
         <>
             <Header parentMenu='service' />
-            <Breadcrumb pageTitle="Service Details" />
             <ServiceDetailsContent />
             <Footer />
         </>

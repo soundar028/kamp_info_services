@@ -9,6 +9,8 @@ import LatestBlog from '../components/LatestBlog';
 import Partner from '../components/Partner';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import Footprint from '../components/Footprint';
+import NPD from '../components/NPD';
 
 const Home2 = () => {
     return (
@@ -16,6 +18,8 @@ const Home2 = () => {
             <Header parentMenu='home' />
             <Banner />
             <WhatWeDo />
+            <Footprint />
+            <NPD/>
             <CallToAction />
             <TestimonialCountUp />
             <Partner />
