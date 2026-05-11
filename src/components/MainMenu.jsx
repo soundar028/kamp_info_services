@@ -53,7 +53,7 @@ const MainMenu = (props) => {
                                         </li>
                                         <li><Link className={location.pathname === '/about' ? 'active' : ''} to="/about#">About</Link></li>
                                         <li><Link className={parentMenu === 'service' ? 'active' : ''} to="/service#">Service</Link></li>
-                                         <li><Link className={location.pathname === '/project' ? 'active' : ''} to="/project#">Gallery</Link></li>
+                                        <li><Link className={location.pathname === '/project' ? 'active' : ''} to="/project#">Gallery</Link></li>
                                         <li><Link className={location.pathname === '/contact' ? 'active' : ''} to="/contact#">Contact</Link></li>
                                     </ul>
                                 </nav>

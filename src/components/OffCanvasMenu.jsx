@@ -36,13 +36,10 @@ const OffCanvasMenu = () => {
                                         <Link className={location.pathname === '/service' ? 'nav-link active' : 'nav-link'} to="/service#">Service</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Contact</Link>
+                                        <Link className={location.pathname === '/project' ? 'nav-link active' : 'nav-link'} to="/project#">Gallery</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Vendor</Link>
-                                    </li>
-                                     <li className="nav-item">
-                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Customer</Link>
+                                        <Link className={location.pathname === '/contact' ? 'nav-link active' : 'nav-link'} to="/contact#">Contact</Link>
                                     </li>
                                 </ul>
                             </div>

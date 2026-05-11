@@ -21,6 +21,22 @@ const SubmissionsDashboard = () => {
     const [typeFilter, setTypeFilter]   = useState('All');
     const [selected, setSelected]       = useState(null);
     const [sortOrder, setSortOrder]     = useState('newest');
+    const formatTimestamp = (timestamp) => {
+    if (!timestamp) return '—';
+
+    const date = new Date(timestamp);
+
+        return date.toLocaleString('en-IN', {
+            year: 'numeric',
+            month: 'short',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: true,
+            timeZone: 'Asia/Kolkata',
+        });
+    };
 
     useEffect(() => { fetchSubmissions(); }, []);
     useEffect(() => { applyFilters(); }, [submissions, search, typeFilter, sortOrder]);
@@ -224,7 +240,7 @@ const SubmissionsDashboard = () => {
                                         {[
                                             { icon: 'icofont-email',      val: sub['Email'] },
                                             { icon: 'icofont-phone',      val: sub['Phone'] },
-                                            { icon: 'icofont-clock-time', val: sub['Timestamp'] },
+                                            { icon: 'icofont-clock-time', val: formatTimestamp(sub['Timestamp']) },
                                         ].map(({ icon, val }, idx) => (
                                             <div key={idx} style={styles.infoRow}>
                                                 <i className={icon} style={styles.infoIcon}></i>
@@ -276,7 +292,7 @@ const SubmissionsDashboard = () => {
                                 { label: 'Phone',        icon: 'icofont-phone',      value: selected['Phone'] },
                                 { label: 'Organization', icon: 'icofont-building',   value: selected['Organization'] },
                                 { label: 'Enquiry Type', icon: 'icofont-users',      value: selected['Enquiry Type'] },
-                                { label: 'Submitted At', icon: 'icofont-clock-time', value: selected['Timestamp'] },
+                                { label: 'Submitted At', icon: 'icofont-clock-time', value: formatTimestamp(selected['Timestamp'] )},
                             ].map(({ label, icon, value }) => (
                                 <div key={label} style={styles.modalRow}>
                                     <div style={styles.modalLabel}>
