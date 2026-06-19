@@ -1,4 +1,3 @@
-// Css 
 import './App.css'
 import '@icon/icofont/icofont.css'
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,24 +9,20 @@ import 'swiper/css/bundle';
 import './assets/css/main.css'
 import './assets/css/responsive.css'
 
-// Components 
-import Routers from './components/Routers';
+import Routers     from './components/Routers';
 import ScrollUpBtn from './components/ScrollUpBtn';
+import LeadPopup   from './components/LeadPopup';
 import { ToastContainer } from 'react-toastify';
 import { useEffect, useState } from 'react';
-import PreLoader from './components/PreLoader';
-import { Helmet } from 'react-helmet';
+import PreLoader   from './components/PreLoader';
+import { Helmet }  from 'react-helmet';
 
 function App() {
-
-  //  Preloader 
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1000)
-  }, [])
+    setTimeout(() => setIsLoading(false), 2000);
+  }, []);
 
   return (
     <>
@@ -35,15 +30,16 @@ function App() {
         <div>
           <Helmet>
             <title>KAMP INFO SERVICES || Streamlined Die Casting solutions for Multiple Industries</title>
-            <link rel="shortcut icon" href="../public/favicon.ico"></link>
+            <link rel="shortcut icon" href="../public/favicon.ico" />
           </Helmet>
           <Routers />
+          <LeadPopup />
           <ScrollUpBtn />
           <ToastContainer />
         </div>
       }
     </>
-  )
+  );
 }
 
-export default App
+export default App;
