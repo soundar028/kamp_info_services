@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
-const SHEET_URL   = "YOUR_APPS_SCRIPT_WEB_APP_URL";
+const SHEET_URL   = "https://script.google.com/macros/s/AKfycbw3zK57CDRjVCW1EzDO45X4iM5tv7xmQkj7JZL-v_YHSoBWxYfZvQFlR9kmNE14mzsB/exec";
 const STORAGE_KEY = "kamp_lead_captured";
 
 const ORANGE = '#f55b14';
@@ -53,6 +53,16 @@ const LeadPopup = () => {
         const t = setTimeout(() => setVisible(true), 1500);
         return () => clearTimeout(t);
     }, [location.pathname]);
+
+    // Handle escape key to close
+    useEffect(() => {
+        if (!visible) return;
+        const handleEscape = (e) => {
+            if (e.key === 'Escape') handleClose();
+        };
+        window.addEventListener('keydown', handleEscape);
+        return () => window.removeEventListener('keydown', handleEscape);
+    }, [visible]);
 
     const handleClose = () => {
         setClosing(true);
@@ -142,11 +152,15 @@ const LeadPopup = () => {
         <div style={{
             ...computedStyles.overlay,
             animation: closing ? 'popupFadeOut 0.35s ease forwards' : 'popupFadeIn 0.35s ease forwards',
+        }}
+        onClick={(e) => {
+            if (e.target === e.currentTarget) handleClose(); // Click outside popup to close
         }}>
             <div style={{
                 ...computedStyles.popup,
                 animation: closing ? 'popupSlideOut 0.35s ease forwards' : 'popupSlideIn 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards',
-            }}>
+            }}
+            onClick={(e) => e.stopPropagation()}>
 
                 {/* Left panel — hidden on mobile */}
                 {!isMobile && (
@@ -188,7 +202,9 @@ const LeadPopup = () => {
 
                 {/* Right panel */}
                 <div style={computedStyles.rightPanel}>
-                    <button onClick={handleClose} style={styles.closeBtn} title="Close">
+                    <button onClick={handleClose} style={styles.closeBtn} title="Close (ESC)"
+                        onMouseEnter={e => { e.currentTarget.style.background = '#e5e7eb'; e.currentTarget.style.transform = 'scale(1.1)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.background = '#f3f4f6'; e.currentTarget.style.transform = 'scale(1)'; }}>
                         <i className="icofont-close"></i>
                     </button>
 
@@ -288,6 +304,12 @@ const LeadPopup = () => {
                                     <i className="icofont-lock" style={{ marginRight: 5, color: ORANGE }}></i>
                                     Your details are safe and never shared.
                                 </p>
+
+                                <button type="button" onClick={handleClose} style={styles.skipBtn}
+                                    onMouseEnter={e => { e.currentTarget.style.background = '#f9fafb'; e.currentTarget.style.borderColor = '#d1d5db'; e.currentTarget.style.color = '#6b7280'; }}
+                                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = '#e5e7eb'; e.currentTarget.style.color = '#9ca3af'; }}>
+                                    Skip for Now
+                                </button>
                             </form>
                         </>
                     ) : (
@@ -337,7 +359,7 @@ const styles = {
     benefitIcon: { fontSize: 14, color: ORANGE, flexShrink: 0 },
     benefitText: { fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 500 },
     rightPanel:  { flex: 1, background: '#fff', padding: '36px 32px', overflowY: 'auto', position: 'relative', boxSizing: 'border-box', minWidth: 0 },
-    closeBtn:    { position: 'absolute', top: 16, right: 16, width: 32, height: 32, borderRadius: '50%', background: '#f3f4f6', border: 'none', cursor: 'pointer', fontSize: 14, color: '#6b7280', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10 },
+    closeBtn:    { position: 'absolute', top: 16, right: 16, width: 32, height: 32, borderRadius: '50%', background: '#f3f4f6', border: 'none', cursor: 'pointer', fontSize: 14, color: '#6b7280', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 10, transition: 'all 0.2s ease' },
     
     mobileHeader: { textAlign: 'center', marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid #f0f0f0' },
     
@@ -357,6 +379,7 @@ const styles = {
     errMsg:      { fontSize: 11, color: '#ef4444', marginTop: 5, display: 'block' },
     submitBtn:   { width: '100%', background: ORANGE, color: '#fff', border: 'none', borderRadius: 10, padding: '13px 20px', fontSize: 15, fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: `0 8px 24px ${ORANGE}44`, transition: 'all 0.2s', marginTop: 4 },
     privacy:     { fontSize: 11, color: '#9ca3af', textAlign: 'center', marginTop: 12, display: 'flex', alignItems: 'center', justifyContent: 'center' },
+    skipBtn:     { width: '100%', background: 'transparent', color: '#9ca3af', border: '1.5px solid #e5e7eb', borderRadius: 10, padding: '11px 20px', fontSize: 14, fontWeight: 600, cursor: 'pointer', marginTop: 12, transition: 'all 0.2s' },
     
     successWrap: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: 300, textAlign: 'center', padding: '20px 0' },
     successIcon: { width: 72, height: 72, borderRadius: '50%', background: ORANGE, display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: 20, animation: 'successBounce 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards', boxShadow: `0 12px 32px ${ORANGE}55` },
