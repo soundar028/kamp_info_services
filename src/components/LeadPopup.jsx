@@ -46,6 +46,9 @@ const LeadPopup = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    // Check for very small screens
+    const isVerySmall = window.innerWidth < 380;
+
     // Re-check on every route change
     useEffect(() => {
         const already = localStorage.getItem(STORAGE_KEY);
@@ -123,25 +126,64 @@ const LeadPopup = () => {
 
     const getStyles = () => {
         if (isMobile) {
-            return {
+            const baseStyles = {
                 ...styles,
-                popup:       { ...styles.popup, flexDirection: 'column', maxWidth: '100%', width: '100%', maxHeight: '100vh', borderRadius: 16, overflowX: 'hidden' },
-                leftPanel:   { ...styles.leftPanel, width: '100%', flexShrink: 1, padding: '28px 20px', minHeight: 'auto' },
-                rightPanel:  { ...styles.rightPanel, padding: '28px 20px', maxHeight: '70vh', overflowX: 'hidden' },
-                hexWrap:     { ...styles.hexWrap, marginBottom: 14 },
-                leftTitle:   { ...styles.leftTitle, fontSize: 18 },
-                leftText:    { ...styles.leftText, fontSize: 12 },
-                benefitIcon: { ...styles.benefitIcon, fontSize: 12 },
-                benefitText: { ...styles.benefitText, fontSize: 12 },
-                formTitle:   { ...styles.formTitle, fontSize: 18 },
-                formSub:     { ...styles.formSub, fontSize: 12 },
-                row2:        { ...styles.row2, gridTemplateColumns: '1fr', gap: 12 }, // Single column on mobile
-                input:       { ...styles.input, fontSize: 14, padding: '11px 14px 11px 38px' },
-                submitBtn:   { ...styles.submitBtn, padding: '12px 16px', fontSize: 14 },
-                successTitle:{ ...styles.successTitle, fontSize: 22 },
-                successMeta: { ...styles.successMeta, padding: '12px 16px' },
-                successMetaItem: { ...styles.successMetaItem, fontSize: 13 },
+                overlay:      { ...styles.overlay, padding: 12 },
+                popup:        { ...styles.popup, flexDirection: 'column', maxWidth: '100%', width: '100%', maxHeight: '100vh', borderRadius: 14, overflowX: 'hidden', maxHeight: 'calc(100vh - 20px)' },
+                leftPanel:    { ...styles.leftPanel, width: '100%', flexShrink: 0, padding: '24px 16px', minHeight: 'auto' },
+                rightPanel:   { ...styles.rightPanel, padding: '24px 16px', maxHeight: 'calc(100vh - 300px)', overflowX: 'hidden', overflowY: 'auto' },
+                closeBtn:     { ...styles.closeBtn, top: 12, right: 12, width: 28, height: 28, fontSize: 12 },
+                
+                mobileHeader: { ...styles.mobileHeader, textAlign: 'center', marginBottom: 16, paddingBottom: 12 },
+                hexWrap:      { ...styles.hexWrap, marginBottom: 12, display: 'flex', justifyContent: 'center' },
+                leftTitle:    { ...styles.leftTitle, fontSize: 16, marginBottom: 8 },
+                leftText:     { ...styles.leftText, fontSize: 11, marginBottom: 16, lineHeight: 1.5 },
+                
+                benefits:     { ...styles.benefits, gap: 10 },
+                benefitIcon:  { ...styles.benefitIcon, fontSize: 12, marginRight: 6 },
+                benefitText:  { ...styles.benefitText, fontSize: 11 },
+                
+                formHeader:   { ...styles.formHeader, marginBottom: 18 },
+                formTag:      { ...styles.formTag, fontSize: 9, letterSpacing: 2, marginBottom: 8 },
+                formTitle:    { ...styles.formTitle, fontSize: 16, marginBottom: 4 },
+                formSub:      { ...styles.formSub, fontSize: 11, lineHeight: 1.5 },
+                
+                row2:         { ...styles.row2, gridTemplateColumns: '1fr', gap: 10 },
+                fieldWrap:    { ...styles.fieldWrap, marginBottom: 12 },
+                inputIcon:    { ...styles.inputIcon, fontSize: 13, left: 11 },
+                input:        { ...styles.input, fontSize: 13, padding: '10px 12px 10px 34px', borderRadius: 8 },
+                select:       { ...styles.select, backgroundPosition: 'right 10px center' },
+                errMsg:       { ...styles.errMsg, fontSize: 10, marginTop: 4 },
+                
+                submitBtn:    { ...styles.submitBtn, padding: '11px 16px', fontSize: 13, marginTop: 2 },
+                skipBtn:      { ...styles.skipBtn, padding: '10px 16px', fontSize: 13, marginTop: 10 },
+                privacy:      { ...styles.privacy, fontSize: 10, marginTop: 10, gap: 3 },
+                
+                successWrap:  { ...styles.successWrap, minHeight: 280, padding: '16px 0' },
+                successIcon:  { ...styles.successIcon, width: 56, height: 56, marginBottom: 14 },
+                successTitle: { ...styles.successTitle, fontSize: 18, marginBottom: 8 },
+                successText:  { ...styles.successText, fontSize: 12, maxWidth: '100%', marginBottom: 16 },
+                successMeta:  { ...styles.successMeta, padding: '10px 14px', marginBottom: 16 },
+                successMetaItem: { ...styles.successMetaItem, fontSize: 12 },
             };
+
+            // Further reduce for very small screens
+            if (isVerySmall) {
+                return {
+                    ...baseStyles,
+                    rightPanel:   { ...baseStyles.rightPanel, padding: '18px 12px' },
+                    leftPanel:    { ...baseStyles.leftPanel, padding: '18px 12px' },
+                    leftTitle:    { ...baseStyles.leftTitle, fontSize: 14 },
+                    leftText:     { ...baseStyles.leftText, fontSize: 10 },
+                    formTitle:    { ...baseStyles.formTitle, fontSize: 14 },
+                    formSub:      { ...baseStyles.formSub, fontSize: 10 },
+                    input:        { ...baseStyles.input, fontSize: 12, padding: '9px 10px 9px 32px' },
+                    submitBtn:    { ...baseStyles.submitBtn, padding: '10px 12px', fontSize: 12 },
+                    skipBtn:      { ...baseStyles.skipBtn, padding: '9px 12px', fontSize: 12 },
+                };
+            }
+            
+            return baseStyles;
         }
         return styles;
     };
@@ -184,15 +226,15 @@ const LeadPopup = () => {
                                 India's trusted sourcing partner for precision aluminum die castings.
                                 Connect with 200+ verified suppliers.
                             </p>
-                            <div style={styles.benefits}>
+                            <div style={{...styles.benefits, ...(isMobile ? computedStyles.benefits : {})}}>
                                 {[
                                     { icon: 'icofont-checked', text: 'Pan-India Supplier Network'  },
                                     { icon: 'icofont-gears',   text: 'HPDC / GDC / LPDC Expertise' },
                                     { icon: 'icofont-star',    text: '98% Client Satisfaction'      },
                                 ].map((b, i) => (
-                                    <div key={i} style={styles.benefit}>
-                                        <i className={b.icon} style={computedStyles.benefitIcon} />
-                                        <span style={computedStyles.benefitText}>{b.text}</span>
+                                    <div key={i} style={{...styles.benefit}}>
+                                        <i className={b.icon} style={{...styles.benefitIcon, ...(isMobile ? computedStyles.benefitIcon : {})}} />
+                                        <span style={{...styles.benefitText, ...(isMobile ? computedStyles.benefitText : {})}}>{b.text}</span>
                                     </div>
                                 ))}
                             </div>
@@ -202,110 +244,110 @@ const LeadPopup = () => {
 
                 {/* Right panel */}
                 <div style={computedStyles.rightPanel}>
-                    <button onClick={handleClose} style={styles.closeBtn} title="Close (ESC)"
+                    <button onClick={handleClose} style={{...styles.closeBtn, ...(isMobile ? computedStyles.closeBtn : {})}} title="Close (ESC)"
                         onMouseEnter={e => { e.currentTarget.style.background = '#e5e7eb'; e.currentTarget.style.transform = 'scale(1.1)'; }}
-                        onMouseLeave={e => { e.currentTarget.style.background = '#f3f4f6'; e.currentTarget.style.transform = 'scale(1)'; }}>
+                        onMouseLeave={e => { e.currentTarget.style.background = isMobile ? '#f3f4f6' : '#f3f4f6'; e.currentTarget.style.transform = 'scale(1)'; }}>
                         <i className="icofont-close"></i>
                     </button>
 
                     {step === 1 ? (
                         <>
                             {isMobile && (
-                                <div style={styles.mobileHeader}>
-                                    <div style={{ ...styles.hexWrap, marginBottom: 12 }}>
-                                        <svg viewBox="0 0 100 100" style={{ width: 60, height: 60 }}>
+                                <div style={{...styles.mobileHeader, ...computedStyles.mobileHeader}}>
+                                    <div style={{...styles.hexWrap, ...computedStyles.hexWrap}}>
+                                        <svg viewBox="0 0 100 100" style={{ width: isVerySmall ? 50 : 60, height: isVerySmall ? 50 : 60 }}>
                                             <polygon points="50,8 88,29 88,71 50,92 12,71 12,29"
                                                 fill="none" stroke={ORANGE} strokeWidth="2" opacity="0.5" />
                                             <polygon points="50,18 78,34 78,66 50,82 22,66 22,34"
                                                 fill={ORANGE} opacity="0.12" />
-                                            <text x="50" y="46" textAnchor="middle" fill={NAVY} fontSize="8" fontWeight="800">K</text>
+                                            <text x="50" y="46" textAnchor="middle" fill={NAVY} fontSize={isVerySmall ? "7" : "8"} fontWeight="800">K</text>
                                         </svg>
                                     </div>
-                                    <h2 style={{ ...computedStyles.leftTitle, marginBottom: 6 }}>Welcome!</h2>
-                                    <p style={{ fontSize: 12, color: '#6b7280', lineHeight: 1.5 }}>
-                                        Connect with India's trusted aluminum die casting sourcing partner
+                                    <h2 style={{...computedStyles.leftTitle, marginBottom: 6, color: NAVY}}>Welcome!</h2>
+                                    <p style={{fontSize: isVerySmall ? 10 : 12, color: '#6b7280', lineHeight: 1.5}}>
+                                        Connect with India's trusted aluminum sourcing partner
                                     </p>
                                 </div>
                             )}
 
-                            <div style={computedStyles.formHeader}>
-                                <div style={styles.formTag}>
+                            <div style={{...computedStyles.formHeader}}>
+                                <div style={{...computedStyles.formTag}}>
                                     <span style={styles.tagDot} />Quick Connect
                                 </div>
-                                <h3 style={computedStyles.formTitle}>Get in Touch</h3>
-                                <p style={computedStyles.formSub}>Share your details and we'll reach out shortly.</p>
+                                <h3 style={{...computedStyles.formTitle}}>Get in Touch</h3>
+                                <p style={{...computedStyles.formSub}}>Share your details and we'll reach out shortly.</p>
                             </div>
 
                             <form onSubmit={handleSubmit} noValidate>
-                                <div style={computedStyles.row2}>
-                                    <div style={styles.fieldWrap}>
-                                        <div style={styles.inputWrap}>
-                                            <i className="icofont-user" style={styles.inputIcon}></i>
+                                <div style={{...computedStyles.row2}}>
+                                    <div style={{...computedStyles.fieldWrap}}>
+                                        <div style={{...styles.inputWrap, ...computedStyles.inputWrap}}>
+                                            <i className="icofont-user" style={{...styles.inputIcon, ...computedStyles.inputIcon}}></i>
                                             <input type="text" name="name" placeholder="Your Name *"
                                                 value={form.name} onChange={handleChange}
                                                 style={{ ...computedStyles.input, ...(errors.name ? styles.inputError : {}) }} />
                                         </div>
-                                        {errors.name && <span style={styles.errMsg}>{errors.name}</span>}
+                                        {errors.name && <span style={computedStyles.errMsg}>{errors.name}</span>}
                                     </div>
-                                    <div style={styles.fieldWrap}>
-                                        <div style={styles.inputWrap}>
-                                            <i className="icofont-phone" style={styles.inputIcon}></i>
+                                    <div style={{...computedStyles.fieldWrap}}>
+                                        <div style={{...styles.inputWrap, ...computedStyles.inputWrap}}>
+                                            <i className="icofont-phone" style={{...styles.inputIcon, ...computedStyles.inputIcon}}></i>
                                             <input type="tel" name="phone" placeholder="Phone Number *"
                                                 value={form.phone} onChange={handleChange}
                                                 style={{ ...computedStyles.input, ...(errors.phone ? styles.inputError : {}) }} />
                                         </div>
-                                        {errors.phone && <span style={styles.errMsg}>{errors.phone}</span>}
+                                        {errors.phone && <span style={computedStyles.errMsg}>{errors.phone}</span>}
                                     </div>
                                 </div>
 
-                                <div style={styles.fieldWrap}>
-                                    <div style={styles.inputWrap}>
-                                        <i className="icofont-email" style={styles.inputIcon}></i>
+                                <div style={{...computedStyles.fieldWrap}}>
+                                    <div style={{...styles.inputWrap, ...computedStyles.inputWrap}}>
+                                        <i className="icofont-email" style={{...styles.inputIcon, ...computedStyles.inputIcon}}></i>
                                         <input type="email" name="email" placeholder="Email Address *"
                                             value={form.email} onChange={handleChange}
                                             style={{ ...computedStyles.input, ...(errors.email ? styles.inputError : {}) }} />
                                     </div>
-                                    {errors.email && <span style={styles.errMsg}>{errors.email}</span>}
+                                    {errors.email && <span style={computedStyles.errMsg}>{errors.email}</span>}
                                 </div>
 
-                                <div style={styles.fieldWrap}>
-                                    <div style={styles.inputWrap}>
-                                        <i className="icofont-building" style={styles.inputIcon}></i>
+                                <div style={{...computedStyles.fieldWrap}}>
+                                    <div style={{...styles.inputWrap, ...computedStyles.inputWrap}}>
+                                        <i className="icofont-building" style={{...styles.inputIcon, ...computedStyles.inputIcon}}></i>
                                         <input type="text" name="organization" placeholder="Organization *"
                                             value={form.organization} onChange={handleChange}
                                             style={{ ...computedStyles.input, ...(errors.organization ? styles.inputError : {}) }} />
                                     </div>
-                                    {errors.organization && <span style={styles.errMsg}>{errors.organization}</span>}
+                                    {errors.organization && <span style={computedStyles.errMsg}>{errors.organization}</span>}
                                 </div>
 
-                                <div style={styles.fieldWrap}>
-                                    <div style={styles.inputWrap}>
-                                        <i className="icofont-users" style={styles.inputIcon}></i>
+                                <div style={{...computedStyles.fieldWrap}}>
+                                    <div style={{...styles.inputWrap, ...computedStyles.inputWrap}}>
+                                        <i className="icofont-users" style={{...styles.inputIcon, ...computedStyles.inputIcon}}></i>
                                         <select name="enquiryType" value={form.enquiryType} onChange={handleChange}
-                                            style={{ ...computedStyles.input, ...styles.select, ...(errors.enquiryType ? styles.inputError : {}), color: form.enquiryType ? NAVY : '#9ca3af' }}>
+                                            style={{ ...computedStyles.input, ...computedStyles.select, ...(errors.enquiryType ? styles.inputError : {}), color: form.enquiryType ? NAVY : '#9ca3af' }}>
                                             <option value="" disabled>I am a — Select Type *</option>
                                             <option value="Supplier">Supplier</option>
                                             <option value="Customer">Customer</option>
                                             <option value="Others">Others</option>
                                         </select>
                                     </div>
-                                    {errors.enquiryType && <span style={styles.errMsg}>{errors.enquiryType}</span>}
+                                    {errors.enquiryType && <span style={computedStyles.errMsg}>{errors.enquiryType}</span>}
                                 </div>
 
                                 <button type="submit" disabled={submitting}
                                     style={{ ...computedStyles.submitBtn, ...(submitting ? { opacity: 0.75, cursor: 'not-allowed' } : {}) }}>
                                     {submitting
-                                        ? <><i className="icofont-spinner icofont-spin" style={{ marginRight: 8 }}></i>Submitting...</>
-                                        : <>Submit Details <i className="icofont-long-arrow-right" style={{ marginLeft: 8 }}></i></>
+                                        ? <><i className="icofont-spinner icofont-spin" style={{ marginRight: 6 }}></i>Submitting...</>
+                                        : <>Submit Details <i className="icofont-long-arrow-right" style={{ marginLeft: 6 }}></i></>
                                     }
                                 </button>
 
-                                <p style={styles.privacy}>
-                                    <i className="icofont-lock" style={{ marginRight: 5, color: ORANGE }}></i>
+                                <p style={{...computedStyles.privacy}}>
+                                    <i className="icofont-lock" style={{ marginRight: 5, color: ORANGE, flexShrink: 0 }}></i>
                                     Your details are safe and never shared.
                                 </p>
 
-                                <button type="button" onClick={handleClose} style={styles.skipBtn}
+                                <button type="button" onClick={handleClose} style={{...computedStyles.skipBtn}}
                                     onMouseEnter={e => { e.currentTarget.style.background = '#f9fafb'; e.currentTarget.style.borderColor = '#d1d5db'; e.currentTarget.style.color = '#6b7280'; }}
                                     onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.borderColor = '#e5e7eb'; e.currentTarget.style.color = '#9ca3af'; }}>
                                     Skip for Now
@@ -313,9 +355,9 @@ const LeadPopup = () => {
                             </form>
                         </>
                     ) : (
-                        <div style={styles.successWrap}>
-                            <div style={styles.successIcon}>
-                                <i className="icofont-check" style={{ fontSize: isMobile ? 28 : 36, color: '#fff' }}></i>
+                        <div style={{...computedStyles.successWrap}}>
+                            <div style={{...computedStyles.successIcon}}>
+                                <i className="icofont-check" style={{ fontSize: isVerySmall ? 20 : (isMobile ? 28 : 36), color: '#fff' }}></i>
                             </div>
                             <h3 style={computedStyles.successTitle}>Thank You!</h3>
                             <p style={computedStyles.successText}>
@@ -323,11 +365,11 @@ const LeadPopup = () => {
                             </p>
                             <div style={computedStyles.successMeta}>
                                 <div style={computedStyles.successMetaItem}>
-                                    <i className="icofont-email" style={{ color: ORANGE, marginRight: 8 }}></i>
-                                    {form.email}
+                                    <i className="icofont-email" style={{ color: ORANGE, marginRight: 6, flexShrink: 0 }}></i>
+                                    <span style={{wordBreak: 'break-word'}}>{form.email}</span>
                                 </div>
                                 <div style={computedStyles.successMetaItem}>
-                                    <i className="icofont-phone" style={{ color: ORANGE, marginRight: 8 }}></i>
+                                    <i className="icofont-phone" style={{ color: ORANGE, marginRight: 6, flexShrink: 0 }}></i>
                                     {form.phone}
                                 </div>
                             </div>
