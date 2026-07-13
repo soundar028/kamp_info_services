@@ -128,10 +128,10 @@ const LeadPopup = () => {
         if (isMobile) {
             const baseStyles = {
                 ...styles,
-                overlay:      { ...styles.overlay, padding: 12 },
-                popup:        { ...styles.popup, flexDirection: 'column', maxWidth: '100%', width: '100%', maxHeight: '100vh', borderRadius: 14, overflowX: 'hidden', maxHeight: 'calc(100vh - 20px)' },
+                overlay:      { ...styles.overlay, padding: 16 },
+                popup:        { ...styles.popup, flexDirection: 'column', maxWidth: 'calc(100% - 32px)', width: '100%', maxHeight: '95vh', borderRadius: 14, overflowX: 'hidden', margin: '0 auto' },
                 leftPanel:    { ...styles.leftPanel, width: '100%', flexShrink: 0, padding: '24px 16px', minHeight: 'auto' },
-                rightPanel:   { ...styles.rightPanel, padding: '24px 16px', maxHeight: 'calc(100vh - 300px)', overflowX: 'hidden', overflowY: 'auto' },
+                rightPanel:   { ...styles.rightPanel, padding: '24px 16px', maxHeight: 'calc(100vh - 320px)', overflowX: 'hidden', overflowY: 'auto' },
                 closeBtn:     { ...styles.closeBtn, top: 12, right: 12, width: 28, height: 28, fontSize: 12 },
                 
                 mobileHeader: { ...styles.mobileHeader, textAlign: 'center', marginBottom: 16, paddingBottom: 12 },
